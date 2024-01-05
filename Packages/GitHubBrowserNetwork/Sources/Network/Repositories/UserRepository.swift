@@ -64,7 +64,7 @@ extension UserRepository.API: APICall {
     var headers: [String: String] {
         [
             HTTPHeaderField.accept.rawValue: ContentType.githubJson.rawValue,
-//            HTTPHeaderField.authorization.rawValue: ContentType.bearer.rawValue,
+            HTTPHeaderField.authorization.rawValue: ContentType.bearer.rawValue,
             HTTPHeaderField.version.rawValue: ContentType.version.rawValue
         ]
     }

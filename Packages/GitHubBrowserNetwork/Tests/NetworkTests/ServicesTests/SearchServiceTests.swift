@@ -12,7 +12,7 @@ final class SearchServiceTests: XCTestCase {
     var service: SearchRepository!
     var mockRepository: SearchRepositoryProtocol!
     
-    let userArray: [User] = [
+    let users = Users(items: [
         User(id: 1,
                 login: "login",
                 avatarUrl: "avatarUrl",
@@ -29,20 +29,49 @@ final class SearchServiceTests: XCTestCase {
                 followingUrl: URL(fileURLWithPath:""),
                 reposUrl: URL(fileURLWithPath:"")
             )
-    ]
+        ]
+    )
+    
+    let emptyUsers = Users(items: [])
   
     func test_searchForUserName_returnArrayOfUser() {
         let userName = "username"
-        var receivedStates: [Loadable<[User], Error>] = []
-        let loadable: Loadable<[User], Error> = .notRequested
-        let response = LoadableSubject<[User], Error>(
+        var receivedStates: [Loadable<Users, Error>] = []
+        let loadable: Loadable<Users, Error> = .notRequested
+        let response = LoadableSubject<Users, Error>(
+            get: { loadable },
+            set: { updatedState in receivedStates.append(updatedState) }
+        )
+        let mockRepository = SearchRepositoryMock()
+        mockRepository.publisherToReturn = Result.success(
+            users
+        ).publisher.eraseToAnyPublisher()
+        
+        let service = SearchService(repository: mockRepository)
+        
+        service.searchUsers(
+            userName: userName,
+            response: response
+        )
+        
+        XCTAssertEqual(mockRepository.searchUsersHasBeenCalledXTime, 1)
+        XCTAssertEqual(mockRepository.searchUsersUsernameReceive, userName)
+        XCTAssertEqual(receivedStates.first, .isLoading(last: nil, cancelBag: CancelBag()))
+        XCTAssertEqual(receivedStates.last, .loaded(users))
+    }
+    
+    func test_searchForUserName_returnEmptyArrayOfUser() {
+        let userName = "username"
+        var receivedStates: [Loadable<Users, Error>] = []
+        let loadable: Loadable<Users, Error> = .notRequested
+        let response = LoadableSubject<Users, Error>(
             get: { loadable },
             set: { updatedState in receivedStates.append(updatedState) }
         )
         let mockRepository = SearchRepositoryMock()
         mockRepository.publisherToReturn = Result.success(
             Users(
-                items: userArray
+                items: []
             )
         ).publisher.eraseToAnyPublisher()
         
@@ -56,14 +85,14 @@ final class SearchServiceTests: XCTestCase {
         XCTAssertEqual(mockRepository.searchUsersHasBeenCalledXTime, 1)
         XCTAssertEqual(mockRepository.searchUsersUsernameReceive, userName)
         XCTAssertEqual(receivedStates.first, .isLoading(last: nil, cancelBag: CancelBag()))
-        XCTAssertEqual(receivedStates.last, .loaded(userArray))
+        XCTAssertEqual(receivedStates.last, .loaded(emptyUsers))
     }
     
     func test_searchForUserName_returnError() {
         let userName = "username"
-        var receivedStates: [Loadable<[User], Error>] = []
-        let loadable: Loadable<[User], Error> = .notRequested
-        let response = LoadableSubject<[User], Error>(
+        var receivedStates: [Loadable<Users, Error>] = []
+        let loadable: Loadable<Users, Error> = .notRequested
+        let response = LoadableSubject<Users, Error>(
             get: { loadable },
             set: { updatedState in receivedStates.append(updatedState) }
         )
