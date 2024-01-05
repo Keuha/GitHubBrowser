@@ -37,8 +37,7 @@ public struct NetworkClient: NetworkingClientProtocol {
         return urlSession
             .dataTaskPublisher(for: request)
             .map {
-                print(String(data: $0.data, encoding: .utf8)!)
-                return $0.data
+                $0.data
             }
             .decode(type: Value.self, decoder: decoder)
             .receive(on: RunLoop.main)

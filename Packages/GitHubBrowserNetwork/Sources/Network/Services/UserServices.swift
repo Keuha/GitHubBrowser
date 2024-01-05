@@ -56,3 +56,30 @@ public struct UserService: UserServicing {
             .store(in: cancelBag)
     }
 }
+
+public class UserServiceMock: UserServicing {
+    public var getUserRepositoryInformationsHasBeenCalledXTime = 0
+    public var getUserRepositoryInformationsUserNameReceive: String!
+   
+    public var getUserDetailHasBeenCalledXTime = 0
+    public var getUserDetailUserNameReceive: String!
+    
+    public init() { }
+    
+    public func getUserRepositoryInformations(
+        userName: String,
+        response: LoadableSubject<[GitHubRepositoryInfo], Error>
+    ) {
+        getUserRepositoryInformationsHasBeenCalledXTime += 1
+        getUserRepositoryInformationsUserNameReceive = userName
+        
+    }
+    
+    public func getUserDetail(
+        userName: String,
+        response: LoadableSubject<UserDetail, Error>
+    ) {
+        getUserDetailHasBeenCalledXTime += 1
+        getUserDetailUserNameReceive = userName
+    }
+}
