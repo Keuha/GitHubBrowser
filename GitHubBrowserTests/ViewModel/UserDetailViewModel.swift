@@ -21,7 +21,7 @@ final class UserDetailViewModel: XCTestCase {
             searchService: mockSearchService
         )
         let mockContainer = ContainerMock(service: mockService)
-        let sut = UserDetailView.ViewModel(
+        _ = UserDetailView.ViewModel(
             container: mockContainer,
             userName: userName,
             profilePicture: URL(fileURLWithPath: "")

@@ -42,6 +42,7 @@
 		EB9AACEE2B48253200B13914 /* GitHubBrowserNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GitHubBrowserNetwork; sourceTree = "<group>"; };
 		EB9AACF62B48265600B13914 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		EB9AACF82B48267900B13914 /* ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContainer.swift; sourceTree = "<group>"; };
+		EBA73EFF2B49EAD20046A5F3 /* GitHubBrowser.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = GitHubBrowser.xctestplan; path = ../GitHubBrowser.xctestplan; sourceTree = "<group>"; };
 		EBBDC5D82B48743D00A0BFA2 /* GitHubBrowserUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GitHubBrowserUI; sourceTree = "<group>"; };
 		EBC338252B480CE00037F738 /* GitHubBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC338282B480CE00037F738 /* GitHubBrowserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubBrowserApp.swift; sourceTree = "<group>"; };
@@ -56,7 +57,6 @@
 		EBEEDF5B2B49C5A100B974DC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EBEEDF5D2B49C94F00B974DC /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		EBF9CCDC2B499EF700C71959 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		EBFE07B22B48917000490D6C /* GitHubBrowser.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GitHubBrowser.xctestplan; sourceTree = "<group>"; };
 		EBFE07B32B48A67E00490D6C /* GitHubBrowserTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitHubBrowserTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		EBFE07B42B48A67F00490D6C /* SearchUserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserViewModelTests.swift; sourceTree = "<group>"; };
 		EBFE07B62B48A6A400490D6C /* ContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerMock.swift; sourceTree = "<group>"; };
@@ -112,9 +112,9 @@
 		EBC3381C2B480CE00037F738 = {
 			isa = PBXGroup;
 			children = (
+				EBA73EFF2B49EAD20046A5F3 /* GitHubBrowser.xctestplan */,
 				EBEEDF5A2B49C59600B974DC /* Localizable.strings */,
 				EBF9CCDC2B499EF700C71959 /* .swiftlint.yml */,
-				EBFE07B22B48917000490D6C /* GitHubBrowser.xctestplan */,
 				EBC338532B480D120037F738 /* Packages */,
 				EBC338272B480CE00037F738 /* GitHubBrowser */,
 				EBC338392B480CE10037F738 /* GitHubBrowserTests */,

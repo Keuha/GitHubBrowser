@@ -63,12 +63,3 @@ public extension UserSearchResultRow {
         }
     }
 }
-
-#Preview {
-    UserSearchResultRow(
-        viewModel: UserSearchResultRow.ViewModel(
-            profilePicture: URL(string: "https://avatars.githubusercontent.com/u/3855308?v=4")!,
-            userName: "Keuha"
-        )
-    )
-}
