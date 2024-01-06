@@ -52,7 +52,7 @@ public struct UserService: UserServicing {
         response.wrappedValue.setIsLoading(cancelBag: cancelBag)
         repository
             .getUserDetail(userName: userName)
-            .sinkToLoadable { 
+            .sinkToLoadable {
                 response.wrappedValue = $0
             }
             .store(in: cancelBag)

@@ -36,7 +36,7 @@ struct UserDetailView: View {
                 )
             )
         case let .failed(error):
-            Text("Error Loading User Info")
+            Text("error_user_info".translate)
             Text(error.localizedDescription)
         default:
             ProgressView()
@@ -54,7 +54,7 @@ struct UserDetailView: View {
                     }
             }
         case .failed:
-            Text("Error Loading Repositories Info")
+            Text("error_repository".translate)
         default:
             ProgressView()
         }
@@ -91,8 +91,14 @@ extension UserDetailView {
             .init(
                 login: userDetail.login,
                 name: userDetail.name,
-                followers: userDetail.followers,
-                following: userDetail.following,
+                followers: String(
+                    format: "followers".translate,
+                    "\(userDetail.followers)"
+                ),
+                following: String(
+                    format: "following".translate,
+                    "\(userDetail.following)"
+                ),
                 profilePicture: self.profilePicture
             )
         }

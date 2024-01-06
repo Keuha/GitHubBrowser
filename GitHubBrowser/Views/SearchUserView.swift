@@ -20,7 +20,7 @@ struct SearchUserView: View {
             }
             .searchable(text: $viewModel.searchTerm)
             .padding(.bottom)
-            .navigationTitle("Search for github user")
+            .navigationTitle("search_for_user".translate)
             .edgesIgnoringSafeArea(.bottom)
     }
     
@@ -67,12 +67,16 @@ struct SearchUserView: View {
         if viewModel.searchTerm.isEmpty {
             // No Search terms has been input, display a welcome message
             Spacer()
-            Text("Go look for something!")
+            Text("search_start".translate)
             Spacer()
         } else if viewModel.lastSearchedTerm.isEmpty == false && viewModel.users.isLoading == false {
             // a term has been searched, and the view is not loading anymore, it means no result have been fetched
             Spacer()
-            Text("No result for \(viewModel.lastSearchedTerm)")
+            Text(
+                String(
+                    format: "search_no_result".translate, "\(viewModel.lastSearchedTerm)"
+                )
+            )
             Spacer()
         } else {
             // loading
