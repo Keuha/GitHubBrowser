@@ -39,10 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB56C95B2B49EC7D008F8ADD /* GitHubBrowser.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GitHubBrowser.xctestplan; sourceTree = "<group>"; };
 		EB9AACEE2B48253200B13914 /* GitHubBrowserNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GitHubBrowserNetwork; sourceTree = "<group>"; };
 		EB9AACF62B48265600B13914 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		EB9AACF82B48267900B13914 /* ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContainer.swift; sourceTree = "<group>"; };
-		EBA73EFF2B49EAD20046A5F3 /* GitHubBrowser.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = GitHubBrowser.xctestplan; path = ../GitHubBrowser.xctestplan; sourceTree = "<group>"; };
 		EBBDC5D82B48743D00A0BFA2 /* GitHubBrowserUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GitHubBrowserUI; sourceTree = "<group>"; };
 		EBC338252B480CE00037F738 /* GitHubBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC338282B480CE00037F738 /* GitHubBrowserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubBrowserApp.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 		EBC3381C2B480CE00037F738 = {
 			isa = PBXGroup;
 			children = (
-				EBA73EFF2B49EAD20046A5F3 /* GitHubBrowser.xctestplan */,
+				EB56C95B2B49EC7D008F8ADD /* GitHubBrowser.xctestplan */,
 				EBEEDF5A2B49C59600B974DC /* Localizable.strings */,
 				EBF9CCDC2B499EF700C71959 /* .swiftlint.yml */,
 				EBC338532B480D120037F738 /* Packages */,
