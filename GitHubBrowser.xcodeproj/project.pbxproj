@@ -17,6 +17,7 @@
 		EBC3382D2B480CE10037F738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC3382C2B480CE10037F738 /* Assets.xcassets */; };
 		EBC338312B480CE10037F738 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC338302B480CE10037F738 /* Preview Assets.xcassets */; };
 		EBE8AE172B49A2620047A2C2 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE8AE162B49A2620047A2C2 /* UserDetailViewModel.swift */; };
+		EBE8AE192B49A8000047A2C2 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE8AE182B49A8000047A2C2 /* WebView.swift */; };
 		EBFE07B12B4876E500490D6C /* GitHubBrowserUI in Frameworks */ = {isa = PBXBuildFile; productRef = EBFE07B02B4876E500490D6C /* GitHubBrowserUI */; };
 		EBFE07B52B48A67F00490D6C /* SearchUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE07B42B48A67F00490D6C /* SearchUserViewModelTests.swift */; };
 		EBFE07B72B48A6A400490D6C /* ContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE07B62B48A6A400490D6C /* ContainerMock.swift */; };
@@ -48,6 +49,7 @@
 		EBC338302B480CE10037F738 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EBC338362B480CE10037F738 /* GitHubBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE8AE162B49A2620047A2C2 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
+		EBE8AE182B49A8000047A2C2 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EBF9CCDC2B499EF700C71959 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EBFE07B22B48917000490D6C /* GitHubBrowser.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GitHubBrowser.xctestplan; sourceTree = "<group>"; };
 		EBFE07B32B48A67E00490D6C /* GitHubBrowserTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitHubBrowserTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				EBC3382A2B480CE00037F738 /* SearchUserView.swift */,
 				EBFE07BE2B4949C100490D6C /* MainAppView.swift */,
 				EBFE07C02B494CC400490D6C /* UserDetailView.swift */,
+				EBE8AE182B49A8000047A2C2 /* WebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBC3382B2B480CE00037F738 /* SearchUserView.swift in Sources */,
+				EBE8AE192B49A8000047A2C2 /* WebView.swift in Sources */,
 				EBFE07BF2B4949C100490D6C /* MainAppView.swift in Sources */,
 				EBFE07BD2B49493800490D6C /* NavigationFlow.swift in Sources */,
 				EB9AACF72B48265600B13914 /* Container.swift in Sources */,
