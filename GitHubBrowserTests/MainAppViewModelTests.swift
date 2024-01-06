@@ -17,7 +17,7 @@ final class MainAppViewModelTests: XCTestCase {
             searchService: mockSearchService
         )
         let mockContainer = ContainerMock(service: mockService)
-        let sut = MainAppView.ViewModel(container: mockContainer)
+        let sut = SearchUserView.ViewModel(container: mockContainer)
         
         sut.searchTerm = "123"
         sut.searchTerm = "1234"
@@ -36,14 +36,14 @@ final class MainAppViewModelTests: XCTestCase {
             searchService: mockSearchService
         )
         let mockContainer = ContainerMock(service: mockService)
-        let sut = MainAppView.ViewModel(container: mockContainer)
+        let sut = SearchUserView.ViewModel(container: mockContainer)
         
         XCTAssertNil(sut.getUsers())
     }
     
     func test_whenUsersHasLoadPriorValue_usersIsLoading_getUserIsNotNil() {
         let mockContainer = ContainerMock()
-        let sut = MainAppView.ViewModel(container: mockContainer)
+        let sut = SearchUserView.ViewModel(container: mockContainer)
         
         let users = Users(items: [
             User(id: 1,
@@ -72,7 +72,7 @@ final class MainAppViewModelTests: XCTestCase {
     
     func test_whenUsersHasLoadPriorValue_usersIsLoadingButPreviousIsNil_getUserIsNil() {
         let mockContainer = ContainerMock()
-        let sut = MainAppView.ViewModel(container: mockContainer)
+        let sut = SearchUserView.ViewModel(container: mockContainer)
         
         sut.users = .isLoading(last: nil, cancelBag: CancelBag())
         
