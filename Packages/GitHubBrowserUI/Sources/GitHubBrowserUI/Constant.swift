@@ -6,8 +6,12 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum Constant {
+   
+    static let cardBackground = Color(red: 18 / 155, green: 18 / 255, blue: 18 / 255, opacity: 0.3)
+
     enum Transaction {
         static let response = 0.5
         static let dampingFraction = 0.65
