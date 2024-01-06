@@ -7,8 +7,10 @@
 
 import Foundation
 
-extension String {
-    public var translate: String {
+// swiftlint:disable all
+public extension String {
+    var translate: String {
         return NSLocalizedString(self, comment: "")
     }
 }
+// swiftlint:enable all
