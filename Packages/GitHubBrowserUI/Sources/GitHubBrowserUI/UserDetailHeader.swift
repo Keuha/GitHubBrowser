@@ -36,8 +36,8 @@ public struct UserDetailHeader: View {
                 maxHeight: Constant.Row.maxHeight
             )
             HStack {
-                Text("Followers : \(viewModel.followers)")
-                Text("Following : \(viewModel.following)")
+                Text(viewModel.followers)
+                Text(viewModel.following)
             }
             .padding([.leading, .trailing, .bottom])
         }
@@ -57,15 +57,15 @@ public extension UserDetailHeader {
     final class ViewModel {
         let login: String
         let name: String
-        let followers: Int
-        let following: Int
+        let followers: String
+        let following: String
         let profilePicture: URL
         
         public init(
             login: String,
             name: String,
-            followers: Int,
-            following: Int,
+            followers: String,
+            following: String,
             profilePicture: URL
         ) {
             self.login = login

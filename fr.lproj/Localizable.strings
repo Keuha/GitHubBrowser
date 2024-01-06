@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  GitHubBrowser
+
+  Created by Franck Petriz on 06/01/2024.
+  
+*/
+
+// Mark: SearchView
+"search_for_user" = "rechercher un utilisateur";
+"search_placeholder" = "rechercher ...";
+"search_start" = "rechercher un utilisateur pour obtenir plus d'information!";
+"search_no_result" = "aucun résultat pour %@";
+
+// Mark: UserDetailView
+"followers" = "followers : %@";
+"following" = "following : %@";
+
+// Mark: Error
+"error_user_info" = "erreur lors du chargement des infos utilisateur";
+"error_repository" = "erreur lors du chargement des infos du repositorie";
+
