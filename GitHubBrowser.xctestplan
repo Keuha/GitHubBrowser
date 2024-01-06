@@ -14,16 +14,16 @@
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "container:GitHubBrowser.xcodeproj",
-        "identifier" : "EBC338352B480CE10037F738",
-        "name" : "GitHubBrowserTests"
+        "containerPath" : "container:Packages\/GitHubBrowserNetwork",
+        "identifier" : "GitHubBrowserNetworkTests",
+        "name" : "GitHubBrowserNetworkTests"
       }
     },
     {
       "target" : {
-        "containerPath" : "container:Packages\/GitHubBrowserNetwork",
-        "identifier" : "GitHubBrowserNetworkTests",
-        "name" : "GitHubBrowserNetworkTests"
+        "containerPath" : "container:GitHubBrowser.xcodeproj",
+        "identifier" : "EBC338352B480CE10037F738",
+        "name" : "GitHubBrowserTests"
       }
     }
   ],
