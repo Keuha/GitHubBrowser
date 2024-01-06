@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "E7C901E8-5018-44F6-8619-D0B8B7D6E018",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:GitHubBrowser.xcodeproj",
+        "identifier" : "EBC338352B480CE10037F738",
+        "name" : "GitHubBrowserTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Packages\/GitHubBrowserNetwork",
+        "identifier" : "GitHubBrowserNetworkTests",
+        "name" : "GitHubBrowserNetworkTests"
+      }
+    }
+  ],
+  "version" : 1
+}
