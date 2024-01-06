@@ -37,7 +37,7 @@ public struct UserDetail: Identifiable, Codable, Equatable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(Int.self, forKey: .id)
         self.login = try container.decode(String.self, forKey: .login)
-        self.name = try container.decode(String.self, forKey: .name)
+        self.name = try container.decodeIfPresent(String.self, forKey: .name) ?? ""
         self.followers = try container.decode(Int.self, forKey: .followers)
         self.following = try container.decode(Int.self, forKey: .following)
     }

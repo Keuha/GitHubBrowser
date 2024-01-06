@@ -17,6 +17,11 @@ struct UserDetailView: View {
             userInfo()
             repositoriesInfo()
         }
+        .sheet(isPresented: $viewModel.isWebViewPresented) {
+            NavigationStack {
+                WebView(webViewURL: viewModel.repositoryUrl)
+            }
+        }
         .edgesIgnoringSafeArea(.bottom)
         .padding(.horizontal)
     }
@@ -30,8 +35,9 @@ struct UserDetailView: View {
                     userDetail: userDetail
                 )
             )
-        case .failed:
+        case let .failed(error):
             Text("Error Loading User Info")
+            Text(error.localizedDescription)
         default:
             ProgressView()
         }
@@ -43,6 +49,9 @@ struct UserDetailView: View {
         case let .loaded(repositories):
             ForEach(repositories) { repository in
                 RepositoryRow(viewModel: viewModel.makeRepositoryRowViewModel(repository: repository))
+                    .onTapGesture {
+                        viewModel.onRowTapped(repository: repository)
+                    }
             }
         case .failed:
             Text("Error Loading Repositories Info")
@@ -57,6 +66,8 @@ extension UserDetailView {
         private let container: DIContainer
         let userName: String
         let profilePicture: URL
+        var repositoryUrl: URL!
+        @Published var isWebViewPresented = false
         @Published var userDetail: Loadable<UserDetail, Error> = .notRequested
         @Published var repositoriesInfo: Loadable<[GitHubRepositoryInfo], Error> = .notRequested
         
@@ -69,6 +80,11 @@ extension UserDetailView {
             self.userName = userName
             self.profilePicture = profilePicture
             fetchInitialData()
+        }
+        
+        func onRowTapped(repository: GitHubRepositoryInfo) {
+            repositoryUrl = repository.htmlUrl
+            isWebViewPresented.toggle()
         }
         
         func makeUserDetailViewModel(userDetail: UserDetail) -> UserDetailHeader.ViewModel {

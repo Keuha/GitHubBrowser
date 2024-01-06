@@ -49,6 +49,7 @@ public struct UserDetailHeader: View {
                 )
             )
         .padding(.horizontal)
+        .contentShape(Rectangle())  
     }
 }
 

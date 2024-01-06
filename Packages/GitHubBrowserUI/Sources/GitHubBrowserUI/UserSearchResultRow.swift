@@ -20,7 +20,7 @@ public struct UserSearchResultRow: View {
     public var body: some View {
         HStack {
             CustomAsyncImage(pictureUrl: viewModel.profilePicture)
-            .padding(.horizontal)
+                .padding(.horizontal)
             Spacer()
             Text(viewModel.userName)
             Image(systemName: "chevron.right")
@@ -40,8 +40,9 @@ public struct UserSearchResultRow: View {
                     .gray,
                     lineWidth: 1
                 )
-            )
+        )
         .padding(.horizontal)
+        .contentShape(Rectangle())
     }
 }
 

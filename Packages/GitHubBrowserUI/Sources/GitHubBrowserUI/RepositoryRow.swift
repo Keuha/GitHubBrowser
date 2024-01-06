@@ -42,6 +42,7 @@ public struct RepositoryRow: View {
                     )
                 )
             .padding()
+            .contentShape(Rectangle())  
         }
     }
     
