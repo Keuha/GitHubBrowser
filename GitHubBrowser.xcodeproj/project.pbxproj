@@ -39,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EB56C95B2B49EC7D008F8ADD /* GitHubBrowser.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GitHubBrowser.xctestplan; sourceTree = "<group>"; };
 		EB9AACEE2B48253200B13914 /* GitHubBrowserNetwork */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GitHubBrowserNetwork; sourceTree = "<group>"; };
 		EB9AACF62B48265600B13914 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		EB9AACF82B48267900B13914 /* ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContainer.swift; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		EBC3382E2B480CE10037F738 /* GitHubBrowser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GitHubBrowser.entitlements; sourceTree = "<group>"; };
 		EBC338302B480CE10037F738 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EBC338362B480CE10037F738 /* GitHubBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBD685492B49EDE5007F6725 /* GitHubBrowser.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GitHubBrowser.xctestplan; sourceTree = "<group>"; };
 		EBE8AE162B49A2620047A2C2 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		EBE8AE182B49A8000047A2C2 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		EBEEDF592B49C59600B974DC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 		EBC3381C2B480CE00037F738 = {
 			isa = PBXGroup;
 			children = (
-				EB56C95B2B49EC7D008F8ADD /* GitHubBrowser.xctestplan */,
+				EBD685492B49EDE5007F6725 /* GitHubBrowser.xctestplan */,
 				EBEEDF5A2B49C59600B974DC /* Localizable.strings */,
 				EBF9CCDC2B499EF700C71959 /* .swiftlint.yml */,
 				EBC338532B480D120037F738 /* Packages */,
