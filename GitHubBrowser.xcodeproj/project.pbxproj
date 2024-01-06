@@ -13,12 +13,15 @@
 		EB9AACF92B48267900B13914 /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9AACF82B48267900B13914 /* ServiceContainer.swift */; };
 		EBBDC5D92B48743D00A0BFA2 /* GitHubBrowserUI in Resources */ = {isa = PBXBuildFile; fileRef = EBBDC5D82B48743D00A0BFA2 /* GitHubBrowserUI */; };
 		EBC338292B480CE00037F738 /* GitHubBrowserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC338282B480CE00037F738 /* GitHubBrowserApp.swift */; };
-		EBC3382B2B480CE00037F738 /* MainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3382A2B480CE00037F738 /* MainAppView.swift */; };
+		EBC3382B2B480CE00037F738 /* SearchUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3382A2B480CE00037F738 /* SearchUserView.swift */; };
 		EBC3382D2B480CE10037F738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC3382C2B480CE10037F738 /* Assets.xcassets */; };
 		EBC338312B480CE10037F738 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC338302B480CE10037F738 /* Preview Assets.xcassets */; };
 		EBFE07B12B4876E500490D6C /* GitHubBrowserUI in Frameworks */ = {isa = PBXBuildFile; productRef = EBFE07B02B4876E500490D6C /* GitHubBrowserUI */; };
 		EBFE07B52B48A67F00490D6C /* MainAppViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE07B42B48A67F00490D6C /* MainAppViewModelTests.swift */; };
 		EBFE07B72B48A6A400490D6C /* ContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE07B62B48A6A400490D6C /* ContainerMock.swift */; };
+		EBFE07BD2B49493800490D6C /* NavigationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE07BC2B49493800490D6C /* NavigationFlow.swift */; };
+		EBFE07BF2B4949C100490D6C /* MainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE07BE2B4949C100490D6C /* MainAppView.swift */; };
+		EBFE07C12B494CC400490D6C /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE07C02B494CC400490D6C /* UserDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,7 @@
 		EBBDC5D82B48743D00A0BFA2 /* GitHubBrowserUI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GitHubBrowserUI; sourceTree = "<group>"; };
 		EBC338252B480CE00037F738 /* GitHubBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC338282B480CE00037F738 /* GitHubBrowserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubBrowserApp.swift; sourceTree = "<group>"; };
-		EBC3382A2B480CE00037F738 /* MainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppView.swift; sourceTree = "<group>"; };
+		EBC3382A2B480CE00037F738 /* SearchUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserView.swift; sourceTree = "<group>"; };
 		EBC3382C2B480CE10037F738 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBC3382E2B480CE10037F738 /* GitHubBrowser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GitHubBrowser.entitlements; sourceTree = "<group>"; };
 		EBC338302B480CE10037F738 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		EBFE07B32B48A67E00490D6C /* GitHubBrowserTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitHubBrowserTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		EBFE07B42B48A67F00490D6C /* MainAppViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppViewModelTests.swift; sourceTree = "<group>"; };
 		EBFE07B62B48A6A400490D6C /* ContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerMock.swift; sourceTree = "<group>"; };
+		EBFE07BC2B49493800490D6C /* NavigationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationFlow.swift; sourceTree = "<group>"; };
+		EBFE07BE2B4949C100490D6C /* MainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppView.swift; sourceTree = "<group>"; };
+		EBFE07C02B494CC400490D6C /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +115,10 @@
 		EBC338272B480CE00037F738 /* GitHubBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				EBFE07BB2B49491E00490D6C /* Flow */,
+				EBFE07BA2B49490200490D6C /* Views */,
 				EB9AACF52B48264900B13914 /* DIContainer */,
 				EBC338282B480CE00037F738 /* GitHubBrowserApp.swift */,
-				EBC3382A2B480CE00037F738 /* MainAppView.swift */,
 				EBC3382C2B480CE10037F738 /* Assets.xcassets */,
 				EBC3382E2B480CE10037F738 /* GitHubBrowser.entitlements */,
 				EBC3382F2B480CE10037F738 /* Preview Content */,
@@ -160,6 +167,24 @@
 			children = (
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		EBFE07BA2B49490200490D6C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EBC3382A2B480CE00037F738 /* SearchUserView.swift */,
+				EBFE07BE2B4949C100490D6C /* MainAppView.swift */,
+				EBFE07C02B494CC400490D6C /* UserDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EBFE07BB2B49491E00490D6C /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				EBFE07BC2B49493800490D6C /* NavigationFlow.swift */,
+			);
+			path = Flow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,8 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBC3382B2B480CE00037F738 /* MainAppView.swift in Sources */,
+				EBC3382B2B480CE00037F738 /* SearchUserView.swift in Sources */,
+				EBFE07BF2B4949C100490D6C /* MainAppView.swift in Sources */,
+				EBFE07BD2B49493800490D6C /* NavigationFlow.swift in Sources */,
 				EB9AACF72B48265600B13914 /* Container.swift in Sources */,
+				EBFE07C12B494CC400490D6C /* UserDetailView.swift in Sources */,
 				EB9AACF92B48267900B13914 /* ServiceContainer.swift in Sources */,
 				EBC338292B480CE00037F738 /* GitHubBrowserApp.swift in Sources */,
 			);

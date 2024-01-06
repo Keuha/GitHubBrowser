@@ -1,5 +1,5 @@
 //
-//  MainAppView.swift
+//  SearchUserView.swift
 //  GitHubBrowser
 //
 //  Created by Franck Petriz on 05/01/2024.
@@ -10,18 +10,17 @@ import GitHubBrowserNetwork
 import GitHubBrowserUI
 import Combine
 
-struct MainAppView: View {
-    @StateObject var viewModel: MainAppView.ViewModel
+struct SearchUserView: View {
+    @StateObject var viewModel: SearchUserView.ViewModel
     
     var body: some View {
-        NavigationStack {
-            VStack(alignment: .center) {
+        VStack(alignment: .center) {
                 loading()
                 content()
             }
             .searchable(text: $viewModel.searchTerm)
             .padding()
-        }.navigationTitle("Search for github user")
+            .navigationTitle("Search for github user")
     }
     
     @ViewBuilder
@@ -52,7 +51,7 @@ struct MainAppView: View {
                             userName: user.login
                         )
                     ).onTapGesture {
-                        print("navigate to \(user.login)")
+                        viewModel.didComplete.send(user.login)
                     }
                 }
             }
@@ -102,13 +101,14 @@ struct MainAppView: View {
                     
 }
 
-extension MainAppView {
-    final class ViewModel: ObservableObject {
+extension SearchUserView {
+    final class ViewModel: ObservableObject, Navigable {
         private let container: DIContainer
         private var cancelBag = CancelBag()
         @Published var searchTerm: String = ""
         @Published var users: Loadable<Users, Error> = .notRequested
         @Published private(set) var lastSearchedTerm: String = ""
+        var didComplete = PassthroughSubject<String, Never>()
         private var timer: Timer?
        
         init(
@@ -128,10 +128,14 @@ extension MainAppView {
                 return nil
             }
         }
+        static func == (lhs: SearchUserView.ViewModel, rhs: SearchUserView.ViewModel) -> Bool {
+            lhs.users == rhs.users &&
+            lhs.searchTerm == rhs.searchTerm
+        }
     }
 }
 
-private extension MainAppView.ViewModel {
+private extension SearchUserView.ViewModel {
     func request() {
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 0.75, repeats: false) { timer in
