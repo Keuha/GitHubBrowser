@@ -158,7 +158,8 @@ private extension SearchUserView.ViewModel {
    
     func listenToSearchTermChange() {
         $searchTerm.sink { value in
-            if value.isEmpty == false {
+            if value.isEmpty == false &&
+                self.searchTerm != self.lastSearchedTerm {
                 self.request()
             }
         }

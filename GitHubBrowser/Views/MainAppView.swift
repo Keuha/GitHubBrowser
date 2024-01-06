@@ -21,6 +21,7 @@ struct MainAppView: View {
                     switch step {
                     case let .userDetailView(viewModel):
                         UserDetailView(viewModel: viewModel)
+                            .toolbarRole(.navigationStack)
                     }
                 }
             }

@@ -13,17 +13,19 @@ struct UserDetailView: View {
     @StateObject var viewModel: ViewModel
     
     var body: some View {
-        ScrollView {
-            userInfo()
-            repositoriesInfo()
-        }
-        .sheet(isPresented: $viewModel.isWebViewPresented) {
-            NavigationStack {
-                WebView(webViewURL: viewModel.repositoryUrl)
+        VStack {
+            ScrollView {
+                userInfo()
+                repositoriesInfo()
             }
+            .sheet(isPresented: $viewModel.isWebViewPresented) {
+                NavigationStack {
+                    WebView(webViewURL: viewModel.repositoryUrl)
+                }
+            }
+            .padding(.bottom)
         }
         .edgesIgnoringSafeArea(.bottom)
-        .padding(.horizontal)
     }
     
     @ViewBuilder

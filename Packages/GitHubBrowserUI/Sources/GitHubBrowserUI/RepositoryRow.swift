@@ -36,13 +36,17 @@ public struct RepositoryRow: View {
             }
             .overlay(
                 RoundedRectangle(cornerRadius: Constant.Radius.small)
-                    .stroke(
-                        .gray,
-                        lineWidth: 1
-                    )
+                .stroke(
+                    Color.cardBackground.opacity(0.3),
+                    lineWidth: 1
                 )
-            .padding()
-            .contentShape(Rectangle())  
+                .background(
+                    RoundedRectangle(cornerRadius: Constant.Radius.small)
+                        .fill(Color.gray.opacity(0.1))
+                )
+                
+            )
+            .padding(.horizontal)
         }
     }
     

@@ -85,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB4DCB052B49E89500BE0B62 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EBEEDF5D2B49C94F00B974DC /* String+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		EB9AACF02B48255400B13914 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +135,7 @@
 		EBC338272B480CE00037F738 /* GitHubBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				EB4DCB052B49E89500BE0B62 /* Extension */,
 				EBFE07BB2B49491E00490D6C /* Flow */,
 				EBFE07BA2B49490200490D6C /* Views */,
 				EB9AACF52B48264900B13914 /* DIContainer */,
@@ -134,7 +143,6 @@
 				EBC3382C2B480CE10037F738 /* Assets.xcassets */,
 				EBC3382E2B480CE10037F738 /* GitHubBrowser.entitlements */,
 				EBC3382F2B480CE10037F738 /* Preview Content */,
-				EBEEDF5D2B49C94F00B974DC /* String+Extension.swift */,
 			);
 			path = GitHubBrowser;
 			sourceTree = "<group>";
