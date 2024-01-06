@@ -11,13 +11,13 @@ let package = Package(
     products: [
         .library(
             name: "GitHubBrowserNetwork",
-            targets: ["GitHubBrowserNetwork"]),
+            targets: ["GitHubBrowserNetwork"])
     ],
     targets: [
         .target(
             name: "GitHubBrowserNetwork"),
         .testTarget(
             name: "GitHubBrowserNetworkTests",
-            dependencies: ["GitHubBrowserNetwork"]),
+            dependencies: ["GitHubBrowserNetwork"])
     ]
 )

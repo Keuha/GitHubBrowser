@@ -15,7 +15,7 @@ public class NetworkClientMock: NetworkingClientProtocol {
 
     public init() { }
     
-    public func call<Value>(endpoint: APICall) -> AnyPublisher<Value, Error> where Value : Decodable {
+    public func call<Value>(endpoint: APICall) -> AnyPublisher<Value, Error> where Value: Decodable {
         callHasBennCalledXTime += 1
         callEndpointReceive = endpoint
         let ret: Result<Value, Error> = Result.failure(NetworkError.cantCreateURL)

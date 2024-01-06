@@ -23,7 +23,7 @@ public struct NetworkClient: NetworkingClientProtocol {
         self.decoder.keyDecodingStrategy = .convertFromSnakeCase
     }
     
-    public func call<Value>(endpoint: APICall) -> AnyPublisher<Value, Error> where Value : Decodable {
+    public func call<Value>(endpoint: APICall) -> AnyPublisher<Value, Error> where Value: Decodable {
         guard let url = URL(string: "\(baseURL)\(endpoint.path)") else {
             return AnyPublisher(
                 Fail<Value, Error>(error: NetworkError.cantCreateURL)

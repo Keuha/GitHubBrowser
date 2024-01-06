@@ -26,7 +26,7 @@ public struct User: Codable, Identifiable, Equatable {
     // github user Login
     public let login: String
     // github user Profile Picture
-    public let avatarUrl: String
+    public let avatarUrl: URL
     // github URL
     public let htmlUrl: URL
     // github followerURL
@@ -39,7 +39,7 @@ public struct User: Codable, Identifiable, Equatable {
     public init(
         id: Int,
         login: String,
-        avatarUrl: String,
+        avatarUrl: URL,
         htmlUrl: URL,
         followersUrl: URL,
         followingUrl: URL,
@@ -58,7 +58,7 @@ public struct User: Codable, Identifiable, Equatable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.id = try container.decode(Int.self, forKey: .id)
         self.login = try container.decode(String.self, forKey: .login)
-        self.avatarUrl = try container.decode(String.self, forKey: .avatarUrl)
+        self.avatarUrl = try container.decode(URL.self, forKey: .avatarUrl)
         self.htmlUrl = try container.decode(URL.self, forKey: .htmlUrl)
         self.followersUrl = try container.decode(URL.self, forKey: .followersUrl)
         self.followingUrl = try container.decode(URL.self, forKey: .followingUrl)

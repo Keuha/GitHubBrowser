@@ -15,7 +15,7 @@ public struct GitHubRepositoryInfo: Codable, Identifiable, Equatable {
     // if the repository is a fork
     public let fork: Bool
     // description of the repository, can be nil
-    public let desciption: String?
+    public let description: String?
     // number of star the repository received
     public let stargazersCount: Int
     // language used in the repository, can be nil

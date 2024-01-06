@@ -19,8 +19,9 @@ struct SearchUserView: View {
                 content()
             }
             .searchable(text: $viewModel.searchTerm)
-            .padding()
+            .padding(.bottom)
             .navigationTitle("Search for github user")
+            .edgesIgnoringSafeArea(.bottom)
     }
     
     @ViewBuilder
@@ -45,13 +46,13 @@ struct SearchUserView: View {
                 ForEach(
                     value.items
                 ) { user in
-                    UserSearchResultView(
-                        viewModel: UserSearchResultView.ViewModel(
-                            profilePicture: URL(string: user.avatarUrl)!,
+                    UserSearchResultRow(
+                        viewModel: UserSearchResultRow.ViewModel(
+                            profilePicture: user.avatarUrl,
                             userName: user.login
                         )
                     ).onTapGesture {
-                        viewModel.didComplete.send(user.login)
+                        viewModel.didComplete.send(user)
                     }
                 }
             }
@@ -105,11 +106,11 @@ extension SearchUserView {
     final class ViewModel: ObservableObject, Navigable {
         private let container: DIContainer
         private var cancelBag = CancelBag()
+        private var timer: Timer?
         @Published var searchTerm: String = ""
         @Published var users: Loadable<Users, Error> = .notRequested
         @Published private(set) var lastSearchedTerm: String = ""
-        var didComplete = PassthroughSubject<String, Never>()
-        private var timer: Timer?
+        var didComplete = PassthroughSubject<User, Never>()
        
         init(
             container: DIContainer

@@ -9,11 +9,11 @@ import Foundation
 import GitHubBrowserNetwork
 
 protocol ServiceContaining {
-    var userService : UserServicing { get }
+    var userService: UserServicing { get }
     var searchService: SearchServicing { get }
 }
 
-struct ServiceContainer : ServiceContaining {
+struct ServiceContainer: ServiceContaining {
     let userService: UserServicing
     let searchService: SearchServicing
     

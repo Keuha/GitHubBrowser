@@ -28,8 +28,4 @@ class ServiceContainerMock: ServiceContaining {
         self.userService = userService
         self.searchService = searchService
     }
-
 }
-
-
-

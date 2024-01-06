@@ -1,5 +1,5 @@
 //
-//  MainAppViewModelTests.swift
+//  SearchUserViewModelTests.swift
 //  GitHubBrowserTests
 //
 //  Created by Franck Petriz on 05/01/2024.
@@ -9,7 +9,7 @@ import XCTest
 import GitHubBrowserNetwork
 @testable import GitHubBrowser
 
-final class MainAppViewModelTests: XCTestCase {
+final class SearchUserViewModelTests: XCTestCase {
 
     func test_whenSearchTermChangeMultipleTime_onlyOnerequestIsMade() {
         let mockSearchService = SearchServiceMock()
@@ -48,21 +48,21 @@ final class MainAppViewModelTests: XCTestCase {
         let users = Users(items: [
             User(id: 1,
                     login: "login",
-                    avatarUrl: "avatarUrl",
-                    htmlUrl: URL(fileURLWithPath:""),
-                    followersUrl: URL(fileURLWithPath:""),
-                    followingUrl: URL(fileURLWithPath:""),
-                    reposUrl: URL(fileURLWithPath:"")
+                    avatarUrl: URL(fileURLWithPath: ""),
+                    htmlUrl: URL(fileURLWithPath: ""),
+                    followersUrl: URL(fileURLWithPath: ""),
+                    followingUrl: URL(fileURLWithPath: ""),
+                    reposUrl: URL(fileURLWithPath: "")
                 ),
             User(id: 2,
                     login: "login",
-                    avatarUrl: "avatarUrl",
-                 htmlUrl: URL(fileURLWithPath:""),
-                    followersUrl: URL(fileURLWithPath:""),
-                    followingUrl: URL(fileURLWithPath:""),
-                    reposUrl: URL(fileURLWithPath:"")
+                    avatarUrl: URL(fileURLWithPath: ""),
+                    htmlUrl: URL(fileURLWithPath: ""),
+                    followersUrl: URL(fileURLWithPath: ""),
+                    followingUrl: URL(fileURLWithPath: ""),
+                    reposUrl: URL(fileURLWithPath: "")
                 )
-            ]
+        ]
         )
         
         sut.users = .isLoading(last: users, cancelBag: CancelBag())

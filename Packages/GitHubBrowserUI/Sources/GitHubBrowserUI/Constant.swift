@@ -27,4 +27,8 @@ enum Constant {
         static let minHeight = 40.0
         static let maxHeight = 80.0
     }
+    
+    enum Icons {
+        static let size = 12.0
+    }
 }

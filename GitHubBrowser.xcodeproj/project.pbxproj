@@ -16,8 +16,9 @@
 		EBC3382B2B480CE00037F738 /* SearchUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC3382A2B480CE00037F738 /* SearchUserView.swift */; };
 		EBC3382D2B480CE10037F738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC3382C2B480CE10037F738 /* Assets.xcassets */; };
 		EBC338312B480CE10037F738 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC338302B480CE10037F738 /* Preview Assets.xcassets */; };
+		EBE8AE172B49A2620047A2C2 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE8AE162B49A2620047A2C2 /* UserDetailViewModel.swift */; };
 		EBFE07B12B4876E500490D6C /* GitHubBrowserUI in Frameworks */ = {isa = PBXBuildFile; productRef = EBFE07B02B4876E500490D6C /* GitHubBrowserUI */; };
-		EBFE07B52B48A67F00490D6C /* MainAppViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE07B42B48A67F00490D6C /* MainAppViewModelTests.swift */; };
+		EBFE07B52B48A67F00490D6C /* SearchUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE07B42B48A67F00490D6C /* SearchUserViewModelTests.swift */; };
 		EBFE07B72B48A6A400490D6C /* ContainerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE07B62B48A6A400490D6C /* ContainerMock.swift */; };
 		EBFE07BD2B49493800490D6C /* NavigationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE07BC2B49493800490D6C /* NavigationFlow.swift */; };
 		EBFE07BF2B4949C100490D6C /* MainAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFE07BE2B4949C100490D6C /* MainAppView.swift */; };
@@ -46,9 +47,11 @@
 		EBC3382E2B480CE10037F738 /* GitHubBrowser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GitHubBrowser.entitlements; sourceTree = "<group>"; };
 		EBC338302B480CE10037F738 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EBC338362B480CE10037F738 /* GitHubBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE8AE162B49A2620047A2C2 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
+		EBF9CCDC2B499EF700C71959 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		EBFE07B22B48917000490D6C /* GitHubBrowser.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GitHubBrowser.xctestplan; sourceTree = "<group>"; };
 		EBFE07B32B48A67E00490D6C /* GitHubBrowserTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitHubBrowserTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		EBFE07B42B48A67F00490D6C /* MainAppViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppViewModelTests.swift; sourceTree = "<group>"; };
+		EBFE07B42B48A67F00490D6C /* SearchUserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUserViewModelTests.swift; sourceTree = "<group>"; };
 		EBFE07B62B48A6A400490D6C /* ContainerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerMock.swift; sourceTree = "<group>"; };
 		EBFE07BC2B49493800490D6C /* NavigationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationFlow.swift; sourceTree = "<group>"; };
 		EBFE07BE2B4949C100490D6C /* MainAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppView.swift; sourceTree = "<group>"; };
@@ -94,6 +97,7 @@
 		EBC3381C2B480CE00037F738 = {
 			isa = PBXGroup;
 			children = (
+				EBF9CCDC2B499EF700C71959 /* .swiftlint.yml */,
 				EBFE07B22B48917000490D6C /* GitHubBrowser.xctestplan */,
 				EBC338532B480D120037F738 /* Packages */,
 				EBC338272B480CE00037F738 /* GitHubBrowser */,
@@ -137,10 +141,9 @@
 		EBC338392B480CE10037F738 /* GitHubBrowserTests */ = {
 			isa = PBXGroup;
 			children = (
+				EBE8AE152B49A2440047A2C2 /* ViewModel */,
 				EBFE07B82B48A7B100490D6C /* Mock */,
-				EBFE07B42B48A67F00490D6C /* MainAppViewModelTests.swift */,
 				EBFE07B32B48A67E00490D6C /* GitHubBrowserTests-Bridging-Header.h */,
-				EBFE07B62B48A6A400490D6C /* ContainerMock.swift */,
 			);
 			path = GitHubBrowserTests;
 			sourceTree = "<group>";
@@ -154,19 +157,21 @@
 			path = Packages;
 			sourceTree = "<group>";
 		};
+		EBE8AE152B49A2440047A2C2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EBFE07B42B48A67F00490D6C /* SearchUserViewModelTests.swift */,
+				EBE8AE162B49A2620047A2C2 /* UserDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		EBFE07B82B48A7B100490D6C /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				EBFE07B92B48A87900490D6C /* Service */,
+				EBFE07B62B48A6A400490D6C /* ContainerMock.swift */,
 			);
 			path = Mock;
-			sourceTree = "<group>";
-		};
-		EBFE07B92B48A87900490D6C /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		EBFE07BA2B49490200490D6C /* Views */ = {
@@ -194,6 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBC3384A2B480CE20037F738 /* Build configuration list for PBXNativeTarget "GitHubBrowser" */;
 			buildPhases = (
+				EBF9CCDB2B499EC300C71959 /* SwiftLint */,
 				EBC338212B480CE00037F738 /* Sources */,
 				EBC338222B480CE00037F738 /* Frameworks */,
 				EBC338232B480CE00037F738 /* Resources */,
@@ -289,6 +295,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EBF9CCDB2B499EC300C71959 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/zsh;
+			shellScript = "alias swiftlint=\"/opt/homebrew/bin/swiftlint\"\n\nif swiftlint >/dev/null; then\n  swiftlint --fix && swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EBC338212B480CE00037F738 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -308,7 +335,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBFE07B52B48A67F00490D6C /* MainAppViewModelTests.swift in Sources */,
+				EBE8AE172B49A2620047A2C2 /* UserDetailViewModel.swift in Sources */,
+				EBFE07B52B48A67F00490D6C /* SearchUserViewModelTests.swift in Sources */,
 				EBFE07B72B48A6A400490D6C /* ContainerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +480,7 @@
 				DEVELOPMENT_TEAM = 932U5M7YW2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -491,6 +520,7 @@
 				DEVELOPMENT_TEAM = 932U5M7YW2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;

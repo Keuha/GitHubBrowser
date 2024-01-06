@@ -37,7 +37,9 @@ public struct UserService: UserServicing {
         repository
             .getUserRepositoryInformations(userName: userName)
             .sinkToLoadable{
-                response.wrappedValue = $0
+                response.wrappedValue = $0.map {
+                    $0.filter { $0.fork == false }
+                }
             }
             .store(in: cancelBag)
     }
@@ -72,7 +74,6 @@ public class UserServiceMock: UserServicing {
     ) {
         getUserRepositoryInformationsHasBeenCalledXTime += 1
         getUserRepositoryInformationsUserNameReceive = userName
-        
     }
     
     public func getUserDetail(

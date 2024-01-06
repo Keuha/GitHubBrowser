@@ -9,20 +9,21 @@
 import XCTest
 
 final class UserServiceTests: XCTestCase {
-    var service: UserService!
-    var mockRepository: UserRepositoryProtocol!
-    let repository = GitHubRepositoryInfo(
+    private var service: UserService!
+    private var mockRepository: UserRepositoryProtocol!
+    private let repository = GitHubRepositoryInfo(
         id: 123,
         name: "name",
         fork: false,
-        desciption: nil,
+        description: nil,
         stargazersCount: 4,
         language: nil,
-        htmlUrl: URL(fileURLWithPath:"")
+        htmlUrl: URL(fileURLWithPath: "")
     )
-    let userDetail = UserDetail(
+    private let userDetail = UserDetail(
         id: 132,
         login: "login",
+        name: "name",
         followers: 7,
         following: 44
     )

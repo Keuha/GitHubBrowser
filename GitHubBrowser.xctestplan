@@ -30,13 +30,6 @@
         "identifier" : "GitHubBrowserNetworkTests",
         "name" : "GitHubBrowserNetworkTests"
       }
-    },
-    {
-      "target" : {
-        "containerPath" : "container:Packages\/GitHubBrowserUI",
-        "identifier" : "GitHubBrowserUITests",
-        "name" : "GitHubBrowserUITests"
-      }
     }
   ],
   "version" : 1

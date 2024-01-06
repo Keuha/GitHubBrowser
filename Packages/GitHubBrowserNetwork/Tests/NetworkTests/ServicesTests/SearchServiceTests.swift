@@ -9,30 +9,30 @@
 import XCTest
 
 final class SearchServiceTests: XCTestCase {
-    var service: SearchRepository!
-    var mockRepository: SearchRepositoryProtocol!
+    private var service: SearchRepository!
+    private var mockRepository: SearchRepositoryProtocol!
     
-    let users = Users(items: [
+    private let users = Users(items: [
         User(id: 1,
                 login: "login",
-                avatarUrl: "avatarUrl",
-                htmlUrl: URL(fileURLWithPath:""),
-                followersUrl: URL(fileURLWithPath:""),
-                followingUrl: URL(fileURLWithPath:""),
-                reposUrl: URL(fileURLWithPath:"")
+                avatarUrl: URL(fileURLWithPath: ""),
+                htmlUrl: URL(fileURLWithPath: ""),
+                followersUrl: URL(fileURLWithPath: ""),
+                followingUrl: URL(fileURLWithPath: ""),
+                reposUrl: URL(fileURLWithPath: "")
             ),
         User(id: 2,
                 login: "login",
-                avatarUrl: "avatarUrl",
-             htmlUrl: URL(fileURLWithPath:""),
-                followersUrl: URL(fileURLWithPath:""),
-                followingUrl: URL(fileURLWithPath:""),
-                reposUrl: URL(fileURLWithPath:"")
+                avatarUrl: URL(fileURLWithPath: ""),
+                htmlUrl: URL(fileURLWithPath: ""),
+                followersUrl: URL(fileURLWithPath: ""),
+                followingUrl: URL(fileURLWithPath: ""),
+                reposUrl: URL(fileURLWithPath: "")
             )
-        ]
+    ]
     )
     
-    let emptyUsers = Users(items: [])
+    private let emptyUsers = Users(items: [])
   
     func test_searchForUserName_returnArrayOfUser() {
         let userName = "username"

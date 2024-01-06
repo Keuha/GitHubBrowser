@@ -55,10 +55,11 @@ extension MainAppView {
             return viewModel
         }
         
-        func navigateToUserDetail(userName: String) {
+        func navigateToUserDetail(user: User) {
             let viewModel = UserDetailView.ViewModel(
                 container: container,
-                userName: userName
+                userName: user.login,
+                profilePicture: user.avatarUrl
             )
             navigationStep.append(.userDetailView(viewModel: viewModel))
         }
